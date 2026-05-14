@@ -2,6 +2,17 @@
 
 Esta web necesita un hosting que ejecute Python, porque el formulario guarda inscripciones en SQLite.
 
+Tambien puede funcionar con MySQL si configuras estas variables en `.env` o en el panel del hosting:
+
+```bash
+DB_ENGINE=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_NAME=miraflor
+DB_USER=root
+DB_PASSWORD=tu_password
+```
+
 ## Opcion recomendada
 
 1. Sube este proyecto a GitHub.

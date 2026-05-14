@@ -1,1 +1,1 @@
-# El proyecto usa solo librerias de la biblioteca estandar de Python.
+PyMySQL==1.1.1

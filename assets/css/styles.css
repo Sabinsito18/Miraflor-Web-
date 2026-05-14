@@ -37,6 +37,7 @@ img {
 
 .header {
   align-items: center;
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   background: rgba(7, 85, 44, 0.96);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.14);
@@ -580,6 +581,23 @@ img {
   color: var(--color-primary);
   font-weight: 800;
   min-height: 1.5rem;
+}
+
+.form__status[data-type="success"] {
+  color: var(--color-primary);
+}
+
+.form__status[data-type="error"] {
+  color: #b42318;
+}
+
+.form__status[data-type="info"] {
+  color: var(--color-accent-blue);
+}
+
+.form button:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
 }
 
 .contact-info__list {

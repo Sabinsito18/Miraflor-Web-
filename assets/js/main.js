@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const data = new FormData(inscriptionForm);
     const status = document.getElementById('formStatus');
+    const submitButton = inscriptionForm.querySelector('button[type="submit"]');
     const payload = {
       nombre_alumno: data.get('nombre'),
       apellidos_alumno: data.get('apellidos'),
@@ -42,52 +43,39 @@ document.addEventListener('DOMContentLoaded', () => {
       privacidad: data.get('privacidad') === 'on'
     };
 
-    if (status) {
-      status.textContent = 'Guardando inscripción...';
-    }
+    setFormStatus(status, 'Guardando inscripción...', 'info');
+    if (submitButton) submitButton.disabled = true;
 
     fetch('/api/inscripciones', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload)
     })
-      .then((response) => {
-        if (!response.ok) throw new Error('No se pudo guardar la inscripción');
-        return response.json();
-      })
-      .then(() => {
-        if (status) {
-          status.textContent = 'Inscripción guardada correctamente. Nos pondremos en contacto contigo.';
+      .then((response) => response.json().then((body) => ({ response, body })))
+      .then(({ response, body }) => {
+        if (!response.ok || !body.ok) {
+          throw new Error(body.error || 'No se pudo guardar la inscripción.');
         }
+
+        setFormStatus(status, 'Inscripción guardada correctamente. Nos pondremos en contacto contigo.', 'success');
         inscriptionForm.reset();
       })
-      .catch(() => {
-        sendInscriptionByEmail(payload, status);
+      .catch((error) => {
+        setFormStatus(
+          status,
+          `No se pudo guardar la inscripción. Abre la web desde http://127.0.0.1:8000 y revisa la conexión MySQL. Detalle: ${error.message}`,
+          'error'
+        );
+      })
+      .finally(() => {
+        if (submitButton) submitButton.disabled = false;
       });
   });
 });
 
-function sendInscriptionByEmail(payload, status) {
-  const subject = 'Inscripción A.C.D. Miraflor';
-  const body = [
-    'Datos del alumno',
-    `Nombre: ${payload.nombre_alumno} ${payload.apellidos_alumno}`,
-    `Fecha de nacimiento: ${payload.fecha_nacimiento}`,
-    `Categoría: ${payload.categoria}`,
-    `Experiencia previa: ${payload.experiencia || 'No indicada'}`,
-    '',
-    'Datos del tutor',
-    `Tutor: ${payload.tutor}`,
-    `Teléfono: ${payload.telefono}`,
-    `Email: ${payload.email}`,
-    '',
-    'Información adicional',
-    payload.observaciones || 'Sin observaciones'
-  ].join('\n');
+function setFormStatus(status, message, type) {
+  if (!status) return;
 
-  if (status) {
-    status.textContent = 'No se encontró el servidor. Se abrirá tu aplicación de correo para completar el envío.';
-  }
-
-  window.location.href = `mailto:info@acdmiraflor.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  status.textContent = message;
+  status.dataset.type = type;
 }

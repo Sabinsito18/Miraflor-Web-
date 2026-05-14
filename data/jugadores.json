@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "nombre": "Juan Perez",
+    "posicion": "Portero",
+    "dorsal": 1,
+    "edad": 24,
+    "altura": "1.85m",
+    "foto": "/img/portero.png",
+    "descripcion": "Especialista en penaltis y gran reflejo bajo palos."
+  },
+  {
+    "id": 2,
+    "nombre": "Carlos Martin",
+    "posicion": "Defensa",
+    "dorsal": 4,
+    "edad": 23,
+    "altura": "1.80m",
+    "foto": "/img/portero.png",
+    "descripcion": "Central contundente y seguro en el juego aereo."
+  },
+  {
+    "id": 3,
+    "nombre": "David Lopez",
+    "posicion": "Centrocampista",
+    "dorsal": 8,
+    "edad": 25,
+    "altura": "1.76m",
+    "foto": "/img/portero.png",
+    "descripcion": "Organiza el juego y marca el ritmo del equipo."
+  },
+  {
+    "id": 4,
+    "nombre": "Miguel Sanchez",
+    "posicion": "Delantero",
+    "dorsal": 9,
+    "edad": 22,
+    "altura": "1.82m",
+    "foto": "/img/portero.png",
+    "descripcion": "Referencia ofensiva con buen remate dentro del area."
+  },
+  {
+    "id": 5,
+    "nombre": "Alvaro Garcia",
+    "posicion": "Extremo",
+    "dorsal": 11,
+    "edad": 21,
+    "altura": "1.74m",
+    "foto": "/img/portero.png",
+    "descripcion": "Jugador rapido, vertical y con desborde."
+  }
+]

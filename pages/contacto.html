@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Formulario de inscripción y contacto de la A.C.D. Miraflor.">
+  <title>Inscripciones y Contacto | A.C.D. Miraflor</title>
+
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <script src="../assets/js/main.js" defer></script>
+</head>
+
+<body>
+  <header class="header">
+    <a href="../index.html" class="header__logo" aria-label="Ir al inicio">
+      <img src="../img/escudo/escudo_transparente.png.png" alt="Escudo A.C.D. Miraflor">
+      <span>A.C.D. Miraflor</span>
+    </a>
+
+    <button class="header__toggle" id="menuToggle" type="button" aria-label="Abrir menú" aria-controls="navMenu" aria-expanded="false">☰</button>
+
+    <nav class="nav" id="navMenu" aria-label="Menú principal">
+      <ul class="nav__list">
+        <li><a href="../index.html" class="nav__link">Inicio</a></li>
+        <li><a href="equipo.html" class="nav__link">Equipo</a></li>
+        <li><a href="calendario.html" class="nav__link">Calendario</a></li>
+        <li><a href="Noticias.html" class="nav__link">Noticias</a></li>
+        <li><a href="contacto.html" class="nav__link nav__link--active" aria-current="page">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero hero--small" aria-labelledby="hero-title">
+      <div class="hero__content">
+        <p class="hero__eyebrow">Temporada 2026/2027</p>
+        <h1 class="hero__title" id="hero-title">Inscripciones abiertas</h1>
+        <p class="hero__subtitle">
+          Forma parte de la familia Miraflor y vive el fútbol con valores, compromiso y compañerismo.
+        </p>
+      </div>
+    </section>
+
+    <section class="contact" aria-labelledby="contact-title">
+      <div class="contact__intro">
+        <p class="hero__eyebrow">Alta de jugadores</p>
+        <h2 class="section-title" id="contact-title">Inscripción y contacto</h2>
+        <p class="section-text">
+          Completa el formulario y el club se pondrá en contacto contigo para confirmar la plaza,
+          resolver dudas y explicar los siguientes pasos.
+        </p>
+      </div>
+
+      <div class="contact__layout">
+        <article class="contact__form-card" aria-labelledby="form-title">
+          <form action="#" method="POST" class="form inscription-form">
+            <h2 class="form__title" id="form-title">Formulario de inscripción</h2>
+
+            <fieldset class="form__fieldset">
+              <legend class="form__legend">Datos del jugador</legend>
+
+              <div class="form__grid">
+                <div class="form__group">
+                  <label for="nombre" class="form__label">Nombre</label>
+                  <input type="text" id="nombre" name="nombre" class="form__input" placeholder="Ej: Juan" autocomplete="given-name" required>
+                </div>
+
+                <div class="form__group">
+                  <label for="apellidos" class="form__label">Apellidos</label>
+                  <input type="text" id="apellidos" name="apellidos" class="form__input" placeholder="Ej: Pérez López" autocomplete="family-name" required>
+                </div>
+              </div>
+
+              <div class="form__grid">
+                <div class="form__group">
+                  <label for="fecha-nac" class="form__label">Fecha de nacimiento</label>
+                  <input type="date" id="fecha-nac" name="fecha-nac" class="form__input" required>
+                </div>
+
+                <div class="form__group">
+                  <label for="categoria" class="form__label">Categoría</label>
+                  <select id="categoria" name="categoria" class="form__input" required>
+                    <option value="">Selecciona una categoría</option>
+                    <option value="chupete">chupete</option>
+                    <option value="prebenjamin">Prebenjamín</option>
+                    <option value="benjamin">Benjamín</option>
+                    <option value="alevin">Alevín</option>
+                    <option value="infantil">Infantil</option>
+                    <option value="cadete">Cadete</option>
+                    <option value="juvenil">Juvenil</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form__group">
+                <label for="experiencia" class="form__label">Experiencia previa</label>
+                <select id="experiencia" name="experiencia" class="form__input">
+                  <option value="">Selecciona una opción</option>
+                  <option value="sin-experiencia">Sin experiencia previa</option>
+                  <option value="escuela">Escuela deportiva</option>
+                  <option value="club">Ha jugado en otro club</option>
+                </select>
+              </div>
+            </fieldset>
+
+            <fieldset class="form__fieldset">
+              <legend class="form__legend">Datos del padre, madre o tutor</legend>
+
+              <div class="form__group">
+                <label for="tutor" class="form__label">Nombre completo del tutor</label>
+                <input type="text" id="tutor" name="tutor" class="form__input" placeholder="Nombre y apellidos" autocomplete="name" required>
+              </div>
+
+              <div class="form__grid">
+                <div class="form__group">
+                  <label for="tel" class="form__label">Teléfono de contacto</label>
+                  <input type="tel" id="tel" name="tel" class="form__input" placeholder="+34 600 000 000" autocomplete="tel" required>
+                </div>
+
+                <div class="form__group">
+                  <label for="email" class="form__label">Correo electrónico</label>
+                  <input type="email" id="email" name="email" class="form__input" placeholder="ejemplo@correo.com" autocomplete="email" required>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset class="form__fieldset">
+              <legend class="form__legend">Información adicional</legend>
+
+              <div class="form__group">
+                <label for="obs" class="form__label">Observaciones médicas o alergias</label>
+                <textarea id="obs" name="obs" class="form__textarea" rows="5" placeholder="Indica cualquier información médica, alergia o dato relevante para el club."></textarea>
+              </div>
+
+              <div class="form__group form__group--checkbox">
+                <input type="checkbox" id="privacidad" name="privacidad" class="form__checkbox" required>
+                <label for="privacidad" class="form__checkbox-label">
+                  Acepto el tratamiento de los datos para la gestión deportiva de la A.C.D. Miraflor.
+                </label>
+              </div>
+            </fieldset>
+
+            <button type="submit" class="btn btn--primary btn--full">Enviar inscripción</button>
+            <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
+            <p class="form__note">
+              La información facilitada se utilizará exclusivamente para la gestión deportiva y administrativa del club.
+            </p>
+          </form>
+        </article>
+
+        <aside class="contact__side" aria-label="Información de contacto del club">
+          <article class="contact-info">
+            <h2 class="contact-info__title">Información del club</h2>
+
+            <ul class="contact-info__list">
+              <li class="contact-info__item">
+                <strong>Teléfono</strong>
+                <a href="tel:+34600000000">+34 600 000 000</a>
+              </li>
+
+              <li class="contact-info__item">
+                <strong>Email</strong>
+                <a href="mailto:info@acdmiraflor.com">info@acdmiraflor.com</a>
+              </li>
+
+              <li class="contact-info__item">
+                <strong>Campo</strong>
+                <span>Campo Municipal El Aroyo</span>
+              </li>
+
+              <li class="contact-info__item">
+                <strong>Horario de atención</strong>
+                <span>Lunes a viernes, de 17:00 a 20:00</span>
+              </li>
+            </ul>
+          </article>
+
+          <article class="directive">
+            <h2 class="directive__title">Compromiso Miraflor</h2>
+
+            <div class="directive__grid">
+              <div class="directive__member">
+                <span class="directive__role">Formación</span>
+                <strong class="directive__name">Aprender compitiendo</strong>
+              </div>
+
+              <div class="directive__member">
+                <span class="directive__role">Valores</span>
+                <strong class="directive__name">Respeto y compañerismo</strong>
+              </div>
+
+              <div class="directive__member">
+                <span class="directive__role">Club</span>
+                <strong class="directive__name">Orgullo por Miraflor</strong>
+              </div>
+            </div>
+          </article>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 Cultural Deportiva Miraflor. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

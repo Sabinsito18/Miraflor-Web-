@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: web-miraflor
+    env: python
+    buildCommand: "python scripts/init_db.py"
+    startCommand: "python server.py"
+    envVars:
+      - key: HOST
+        value: 0.0.0.0

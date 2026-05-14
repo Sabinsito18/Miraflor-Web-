@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Web oficial de la A.C.D. Miraflor: equipo, calendario, noticias e inscripciones.">
+  <title>A.C.D. Miraflor | Web Oficial</title>
+
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/inicio.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <a class="header__logo" href="index.html" aria-label="Ir al inicio">
+      <img src="/img/escudo/escudo_transparente.png.png" alt="Escudo A.C.D. Miraflor">
+      <span>A.C.D. Miraflor</span>
+    </a>
+
+    <button class="header__toggle" id="menuToggle" type="button" aria-label="Abrir menú" aria-controls="navMenu" aria-expanded="false">
+      ☰
+    </button>
+
+    <nav class="nav" id="navMenu" aria-label="Menú principal">
+      <ul class="nav__list">
+        <li><a href="index.html" class="nav__link nav__link--active" aria-current="page">Inicio</a></li>
+        <li><a href="pages/equipo.html" class="nav__link">Equipo</a></li>
+        <li><a href="pages/calendario.html" class="nav__link">Calendario</a></li>
+        <li><a href="pages/Noticias.html" class="nav__link">Noticias</a></li>
+        <li><a href="pages/contacto.html" class="nav__link">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero hero--home">
+      <div class="hero__content">
+        <p class="hero__eyebrow">Web oficial del club</p>
+        <h1 class="hero__title">A.C.D. Miraflor</h1>
+        <p class="hero__subtitle">
+          Formación, barrio y competición. Un club para crecer dentro y fuera del campo.
+        </p>
+        <div class="hero__actions">
+          <a href="pages/calendario.html" class="btn btn--primary">Ver calendario</a>
+          <a href="pages/contacto.html" class="btn btn--ghost">Inscripciones</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="club-strip" aria-label="Identidad del club">
+      <div>
+        <strong>Preferente Madrid</strong>
+        <span>Grupo 4</span>
+      </div>
+      <div>
+        <strong>Temporada</strong>
+        <span>2025/2026</span>
+      </div>
+      <div>
+        <strong>Valores</strong>
+        <span>Respeto, esfuerzo y compañerismo</span>
+      </div>
+    </section>
+
+    <section class="info home-info">
+      <article class="info__card home-card home-card--club">
+        <span class="card-kicker">Nuestro Club</span>
+        <h2>Una familia deportiva con raíces en Miraflor</h2>
+        <p>
+          La A.C.D. Miraflor es un club de fútbol comprometido con la formación deportiva,
+          el compañerismo y el trabajo en equipo. Defendemos nuestros colores con respeto,
+          esfuerzo y orgullo en cada entrenamiento y en cada jornada de competición.
+        </p>
+      </article>
+
+      <article class="info__card home-card">
+        <span class="card-kicker">Agenda</span>
+        <h2>Próximo Partido</h2>
+        <div id="homeNextMatch">
+          <p>Cargando próximo partido...</p>
+        </div>
+        <a href="pages/calendario.html" class="btn btn--secondary home-card__link">Ver calendario</a>
+      </article>
+
+      <article class="info__card home-card">
+        <span class="card-kicker">Actualidad</span>
+        <h2>Última Noticia</h2>
+        <div id="homeLatestNews">
+          <p>Cargando última noticia...</p>
+        </div>
+        <a href="pages/Noticias.html" class="btn btn--secondary home-card__link">Ver noticias</a>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 Cultural Deportiva Miraflor. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

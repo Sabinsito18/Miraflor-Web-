@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Noticias y crónicas de partido de la A.C.D. Miraflor.">
+  <title>Noticias | A.C.D. Miraflor</title>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <script src="../assets/js/main.js" defer></script>
+  <script src="../assets/js/noticias.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <a class="header__logo" href="../index.html" aria-label="Ir al inicio">
+      <img src="/img/escudo/escudo_transparente.png.png" alt="Escudo A.C.D. Miraflor">
+      <span>A.C.D. Miraflor</span>
+    </a>
+
+    <button class="header__toggle" id="menuToggle" type="button" aria-label="Abrir menú" aria-controls="navMenu" aria-expanded="false">☰</button>
+
+    <nav class="nav" id="navMenu" aria-label="Menú principal">
+      <ul class="nav__list">
+        <li><a href="../index.html" class="nav__link">Inicio</a></li>
+        <li><a href="equipo.html" class="nav__link">Equipo</a></li>
+        <li><a href="calendario.html" class="nav__link">Calendario</a></li>
+        <li><a href="Noticias.html" class="nav__link nav__link--active" aria-current="page">Noticias</a></li>
+        <li><a href="contacto.html" class="nav__link">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero hero--small">
+      <div class="hero__content">
+        <p class="hero__eyebrow">Crónicas del Miraflor</p>
+        <h1 class="hero__title">Actualidad del Club</h1>
+        <p class="hero__subtitle">Cada partido jugado se transforma automáticamente en una noticia.</p>
+      </div>
+    </section>
+
+    <section class="news-section" aria-labelledby="news-title">
+      <div class="news-section__header">
+        <h2 class="section-title" id="news-title">Noticias de partidos</h2>
+        <p class="section-text" id="newsStatus">Cargando noticias desde la base de datos...</p>
+      </div>
+
+      <div class="news-list" id="newsList"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 Cultural Deportiva Miraflor. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

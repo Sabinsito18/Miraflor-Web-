@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Calendario y resultados de la A.C.D. Miraflor en Preferente Madrid Grupo 4.">
+  <title>Calendario | A.C.D. Miraflor</title>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <script src="../assets/js/main.js" defer></script>
+  <script src="../assets/js/calendario.js" defer></script>
+</head>
+<body>
+  <header class="header">
+    <a class="header__logo" href="../index.html" aria-label="Ir al inicio">
+      <img src="/img/escudo/escudo_transparente.png.png" alt="Escudo A.C.D. Miraflor">
+      <span>A.C.D. Miraflor</span>
+    </a>
+
+    <button class="header__toggle" id="menuToggle" type="button" aria-label="Abrir menú" aria-controls="navMenu" aria-expanded="false">☰</button>
+
+    <nav class="nav" id="navMenu" aria-label="Menú principal">
+      <ul class="nav__list">
+        <li><a href="../index.html" class="nav__link">Inicio</a></li>
+        <li><a href="equipo.html" class="nav__link">Equipo</a></li>
+        <li><a href="calendario.html" class="nav__link nav__link--active" aria-current="page">Calendario</a></li>
+        <li><a href="Noticias.html" class="nav__link">Noticias</a></li>
+        <li><a href="contacto.html" class="nav__link">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero hero--small">
+      <div class="hero__content">
+        <p class="hero__eyebrow">Preferente Madrid Grupo 4</p>
+        <h1 class="hero__title">Calendario de Partidos</h1>
+        <p class="hero__subtitle">Todos los resultados y las jornadas pendientes de la temporada 2025/2026.</p>
+      </div>
+    </section>
+
+    <section class="info calendar-layout">
+      <article class="info__card info__card--highlight">
+        <span class="card-kicker">Agenda</span>
+        <h2>Próxima Jornada</h2>
+        <div id="nextMatch" data-static="true">
+          <p><strong>Jornada 31:</strong> Ciudad de Getafe SC - Cultural Deportiva Miraflor</p>
+          <p><strong>Fecha:</strong> Domingo 17/05/2026, 18:00</p>
+          <p><strong>Campo:</strong> Visitante</p>
+        </div>
+      </article>
+
+      <article class="info__card info__card--wide">
+        <div class="section-row">
+          <div>
+            <span class="card-kicker">Temporada 2025/2026</span>
+            <h2>Resultados y Programación</h2>
+          </div>
+          <a href="https://www.resultados-futbol.com/competicion/preferente-madrid/2026/grupo4/calendario" class="btn btn--secondary" target="_blank" rel="noopener">
+            Ver fuente
+          </a>
+        </div>
+
+        <p class="calendar-source" id="calendarSource">
+          Preferente Madrid Grupo 4. Los datos se cargan desde la base de datos del club.
+        </p>
+
+        <div class="table-container">
+          <table class="calendar-table">
+            <thead>
+              <tr>
+                <th>J</th>
+                <th>Fecha</th>
+                <th>Partido</th>
+                <th>Resultado</th>
+                <th>Estado</th>
+              </tr>
+            </thead>
+            <tbody id="matchesTable">
+              <tr><td colspan="5">Cargando calendario...</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 Cultural Deportiva Miraflor. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

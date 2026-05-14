@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Plantilla del primer equipo de la A.C.D. Miraflor.">
+  <title>Equipo | A.C.D. Miraflor</title>
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <script src="../assets/js/main.js" defer></script>
+  <script src="../assets/js/equipo.js" defer></script>
+</head>
+<body tabindex="-1">
+  <header class="header">
+    <a class="header__logo" href="../index.html" aria-label="Ir al inicio">
+      <img src="/img/escudo/escudo_transparente.png.png" alt="Escudo A.C.D. Miraflor">
+      <span>A.C.D. Miraflor</span>
+    </a>
+
+    <button class="header__toggle" id="menuToggle" type="button" aria-label="Abrir menú" aria-controls="navMenu" aria-expanded="false">☰</button>
+
+    <nav class="nav" id="navMenu" aria-label="Menú principal">
+      <ul class="nav__list">
+        <li><a href="../index.html" class="nav__link">Inicio</a></li>
+        <li><a href="equipo.html" class="nav__link nav__link--active" aria-current="page">Equipo</a></li>
+        <li><a href="calendario.html" class="nav__link">Calendario</a></li>
+        <li><a href="Noticias.html" class="nav__link">Noticias</a></li>
+        <li><a href="contacto.html" class="nav__link">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="team">
+    <header class="page-heading">
+      <p class="hero__eyebrow">Plantilla</p>
+      <h1>Primer Equipo</h1>
+      <p>Jugadores que defienden nuestros colores cada jornada.</p>
+    </header>
+
+    <section id="teamGrid" class="team__grid" aria-label="Plantilla del primer equipo"></section>
+  </main>
+
+  <div class="modal" id="playerModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalName">
+    <div class="modal__content">
+      <button class="modal__close" id="closeModal" type="button" aria-label="Cerrar">×</button>
+      <img id="modalImg" class="modal__img" src="" alt="">
+      <p class="modal__position"></p>
+      <h2 id="modalName"></h2>
+      <div class="modal__stats">
+        <span>Dorsal <strong id="modalNumber"></strong></span>
+        <span>Edad <strong id="modalAge"></strong></span>
+        <span>Altura <strong id="modalHeight"></strong></span>
+      </div>
+      <p id="modalDescription"></p>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>&copy; 2026 Cultural Deportiva Miraflor. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
